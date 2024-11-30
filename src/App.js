@@ -1,19 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import Globe from "react-globe.gl";
 import "./App.css";
-import newYorkImage from "./images/new-york.jpg";
-import parisImage from "./images/paris.jpg";
-import tokyoImage from "./images/tokyo.jpg";
+
 
 const App = () => {
   const globeRef = useRef();
   const [city, setCity] = useState(""); // Search input value
   const [cityData, setCityData] = useState(null); // Data for the selected city
-
-  // Log images for debugging
-  console.log("New York Image Path:", newYorkImage);
-  console.log("Paris Image Path:", parisImage);
-  console.log("Tokyo Image Path:", tokyoImage);
 
   // Predefined list of cities with coordinates
   const cities = [
@@ -21,21 +14,21 @@ const App = () => {
       name: "New York",
       lat: 40.7128,
       lng: -74.0060,
-      image: newYorkImage,
+
       speciality: ["Dining", "Broadway Shows", "Street Food", "Museums"],
     },
     {
       name: "Paris",
       lat: 48.8566,
       lng: 2.3522,
-      image: parisImage,
+     
       speciality: ["Cafes", "Museums", "Amusement Parks", "Fashion"],
     },
     {
       name: "Tokyo",
       lat: 35.6895,
       lng: 139.6917,
-      image: tokyoImage,
+      
       speciality: ["Sushi", "Tech Hubs", "Temples", "Anime Culture"],
     },
   ];
@@ -54,9 +47,7 @@ const App = () => {
       );
 
       setCityData(selectedCity);
-      document.body.style.backgroundImage = `url(${selectedCity.image})`;
-      document.body.style.backgroundSize = "cover";
-      document.body.style.backgroundPosition = "center";
+     
     } else {
       alert("City not found. Please try a different city.");
     }
