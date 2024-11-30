@@ -1,0 +1,66 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.App {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.templates h2 {
+  text-align: center;
+}
+
+.templates {
+  padding: 20px;
+  text-align: center;
+}
+
+.template-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+
+
+.globe-container {
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Ensures it covers the entire viewport */
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1; /* Stacks above or below the globe based on layout */
+}
+
